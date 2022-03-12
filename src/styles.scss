@@ -5,3 +5,17 @@
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
  
 @import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+h1, h4 {
+    color: rgba($color: #551a77, $alpha: 1.0);
+}
+#content {
+    padding: 5em;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+#content:nth-child(even) {
+    color: rgba($color: #551a77, $alpha: 1.0);
+    background-color: rgb(240, 218, 240);
+}
