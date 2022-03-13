@@ -23,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CollabComponent } from './collab/collab.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CollabComponent } from './collab/collab.component';
     HomeComponent,
     TopBarComponent,
     CollabComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
