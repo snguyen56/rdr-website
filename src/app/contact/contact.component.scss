@@ -1,20 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
  
 @import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
-
-h1, h4 {
-    color: rgb(103, 47, 156);
+mdb-form-control {
+    margin: 2em;
 }
-#content {
-    padding: 5em;
+form {
     padding-left: 20%;
     padding-right: 20%;
-}
-#content:nth-child(even) {
-    color: rgba($color: #551a77, $alpha: 1.0);
-    background-color: rgb(240, 218, 240);
 }

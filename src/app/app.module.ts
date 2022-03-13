@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { ContactComponent } from './contact/contact.component';
 import { CollabComponent } from './collab/collab.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TeamComponent } from './team/team.component';
@@ -32,6 +33,7 @@ import { TeamComponent } from './team/team.component';
     FooterComponent,
     HomeComponent,
     TopBarComponent,
+    ContactComponent,
     CollabComponent,
     AboutUsComponent,
     TeamComponent,
