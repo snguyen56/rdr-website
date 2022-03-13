@@ -22,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
     FooterComponent,
     HomeComponent,
     TopBarComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
