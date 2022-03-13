@@ -19,11 +19,6 @@ h1, h4 {
     background-color: rgb(240, 218, 240);
 }
 
-h3::after {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f007";
-}
 .carousel-control-prev-icon {
     &::after {
       content: '\f053';
