@@ -26,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CollabComponent } from './collab/collab.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TeamComponent } from './team/team.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TeamComponent } from './team/team.component';
     CollabComponent,
     AboutUsComponent,
     TeamComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,
