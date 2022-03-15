@@ -1,42 +1,61 @@
 <header>
-    <!-- Navbar -->
-    <app-top-bar></app-top-bar>
-    <!-- Navbar -->
-    <!-- Background image -->
-    <div class="p-5 text-center bg-image" style="
+  <!-- Navbar -->
+  <app-top-bar></app-top-bar>
+  <!-- Navbar -->
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image" style="
         background-image: url('../../assets/images/RDR\ mountains..jpg');
         height: 625px;
       ">
-        <div class="mask">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white">
-                    <h1 class="mb-3">Rare Disease Research</h1>
-                    <h4 class="mb-3">Supporting research through exceptional clinical trial experience</h4>
-                </div>
-            </div>
+    <div class="mask">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Rare Disease Research</h1>
+          <h4 class="mb-3">Supporting research through exceptional clinical trial experience</h4>
         </div>
+      </div>
     </div>
-    <!-- Background image -->
+  </div>
+  <!-- Background image -->
 </header>
 
 <body class="text-center">
-    <div id="content">
-        <!-- Carousel for images -->
-        <mdb-carousel [controls]="true" [indicators]="true">
-            <mdb-carousel-item>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-                class="d-block w-100"
-                alt="..."
-              />
-            </mdb-carousel-item>
-            <mdb-carousel-item>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                class="d-block w-100"
-                alt="..."
-              />
-            </mdb-carousel-item>
-          </mdb-carousel>
-    </div>
+  <div id="content">
+    <h3>Facility</h3>
+    <!-- Carousel for images -->
+    <mdb-carousel class="w-75 mx-auto" [controls]="true" [indicators]="true">
+      <mdb-carousel-item>
+        <img src="../../assets/images/facilities/entrance.jpg" class="img-fluid" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Entrance</h5>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img src="../../assets/images/facilities/Patient Room.jpg" class="img-fluid" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Patient Room</h5>
+        </div>
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img src="../../assets/images/facilities/RDR_Overnight_Room_1st_Floor.jpg" class="img-fluid" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Overnight Room</h5>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+  <div id="content">
+    <h3>Our Research Facility</h3>
+    <h4>We have over 10000 square feet of dedicated clinical research space.</h4>
+    <p>Our research pharmacy has a controlled mixing environment and storage for refrigerated and room-temperature
+      investigational IV or oral products. Several coordinators and a licensed pharmacist are available for both
+      open-label and randomized controlled studies. The research pharmacist compounds the drug within the same center as
+      the infusion room, minimizing the time between mixing and infusion.</p>
+  </div>
+  <div id="content">
+    <h3>CURRENT COLLABORATORS</h3>
+    <p>RDR is committed to transforming clinical research in rare diseases by several mechanisms including working with
+      the patient(s), their families, communities, and patient advocacy groups. Additionally, our industry collaborators
+      are valuable allies in our mission to achieve common goals to bring new therapies to rare diseases community.</p>
+  </div>
 </body>
