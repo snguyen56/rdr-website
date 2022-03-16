@@ -24,39 +24,18 @@
     <h3>Facility</h3>
     <!-- Carousel for images -->
     <mdb-carousel class="w-75 mx-auto" [controls]="true" [indicators]="true">
-      <mdb-carousel-item>
-        <img src="../../assets/images/facilities/entrance.jpg" class="img-fluid" alt="..." />
+      <mdb-carousel-item *ngFor="let photo of photos">
+        <img [src]="photo.path" class="img-fluid" alt="..." />
         <div class="carousel-caption d-none d-md-block">
-          <h5>Entrance</h5>
-        </div>
-      </mdb-carousel-item>
-      <mdb-carousel-item>
-        <img src="../../assets/images/facilities/Patient Room.jpg" class="img-fluid" alt="..." />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Patient Room</h5>
-        </div>
-      </mdb-carousel-item>
-      <mdb-carousel-item>
-        <img src="../../assets/images/facilities/RDR_Overnight_Room_1st_Floor.jpg" class="img-fluid" alt="..." />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Overnight Room</h5>
+          <h5>{{ photo.title }}</h5>
         </div>
       </mdb-carousel-item>
     </mdb-carousel>
   </div>
-  <div id="content">
-    <h3>Our Research Facility</h3>
-    <h4>We have over 10000 square feet of dedicated clinical research space.</h4>
-    <p>Our research pharmacy has a controlled mixing environment and storage for refrigerated and room-temperature
-      investigational IV or oral products. Several coordinators and a licensed pharmacist are available for both
-      open-label and randomized controlled studies. The research pharmacist compounds the drug within the same center as
-      the infusion room, minimizing the time between mixing and infusion.</p>
-  </div>
-  <div id="content">
-    <h3>CURRENT COLLABORATORS</h3>
-    <p>RDR is committed to transforming clinical research in rare diseases by several mechanisms including working with
-      the patient(s), their families, communities, and patient advocacy groups. Additionally, our industry collaborators
-      are valuable allies in our mission to achieve common goals to bring new therapies to rare diseases community.</p>
+  <div id="content" *ngFor="let section of sections">
+    <h3>{{section.header}}</h3>
+    <h4>{{section.subtitle}}</h4>
+    <p>{{section.body}}</p>
   </div>
   <div id="content">
     <h3>Locations</h3>
