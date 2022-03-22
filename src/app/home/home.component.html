@@ -62,4 +62,18 @@
         <br>
         <a routerLink="/about-us"><button type="button" class="btn btn-secondary btn-lg">Learn More</button></a>
     </div>
+    <div id="content">
+        <h3>Flexbox</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-evenly">
+            <app-card class="mb-3" *ngFor="let trial of trials" [card]="trial">
+            </app-card>
+        </div>
+        <div class="container">
+            <h3>Active Trials</h3>
+            <div class="row">
+                <app-card class="col-4 mb-3" *ngFor="let trial of trials" [card]="trial">
+                </app-card>
+            </div>
+          </div>
+    </div>
 </body>

@@ -27,6 +27,7 @@ import { CollabComponent } from './collab/collab.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TeamComponent } from './team/team.component';
 import { FaqComponent } from './faq/faq.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FaqComponent } from './faq/faq.component';
     AboutUsComponent,
     TeamComponent,
     FaqComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
