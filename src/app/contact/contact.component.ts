@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+
   constructor() { }
+
+  onClickSubmit(data: any){
+    alert("Entered data is: " + JSON.stringify(data))
+
+  }
 
   ngOnInit(): void {
   }
