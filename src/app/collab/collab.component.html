@@ -1,45 +1,56 @@
 <header>
-    <!-- Navbar -->
-    <app-top-bar></app-top-bar>
-    <!-- Navbar -->
-    <!-- Background image -->
-    <div class="p-5 text-center bg-image" style="
+  <!-- Navbar -->
+  <app-top-bar></app-top-bar>
+  <!-- Navbar -->
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image" style="
         background-image: url('../../assets/images/RDR\ mountains..jpg');
-        height: 400px;
+        height: 625px;
       ">
-        <div class="mask">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="text-white">
-                    <h1 class="mb-3">Rare Disease Research</h1>
-                    <h4 class="mb-3">Supporting research through exceptional clinical trial experience</h4>
-                </div>
-            </div>
+    <div class="mask">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Rare Disease Research</h1>
+          <h4 class="mb-3">Supporting research through exceptional clinical trial experience</h4>
         </div>
+      </div>
     </div>
-    <!-- Background image -->
+  </div>
+  <!-- Background image -->
 </header>
 
 <body class="text-center">
-    <div id="content">
-        <!-- Carousel for images -->
-        <mdb-carousel [controls]="true" [indicators]="true">
-            <mdb-carousel-item>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-                class="d-block w-100"
-                alt="..."
-              />
-            </mdb-carousel-item>
-            <mdb-carousel-item>
-              <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                class="d-block w-100"
-                alt="..."
-              />
-            </mdb-carousel-item>
-          </mdb-carousel>
-    </div>
-    <div id="content">
-
-    </div>
+  <div id="content">
+    <h3>Facility</h3>
+    <!-- Carousel for images -->
+    <mdb-carousel class="w-75 mx-auto" [controls]="true" [indicators]="true">
+      <mdb-carousel-item *ngFor="let photo of photos">
+        <img [src]="photo.path" class="img-fluid" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ photo.title }}</h5>
+        </div>
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+  <div id="content" *ngFor="let section of sections">
+    <h3>{{section.header}}</h3>
+    <h4>{{section.subtitle}}</h4>
+    <p>{{section.body}}</p>
+  </div>
+  <div id="content">
+    <h3>Locations</h3>
+    <h5>Atlanta, GA:</h5>
+    <p>1730 Northeast Expressway NE <br>
+      Atlanta, GA 30329</p>
+    <h5>Tampa, Fl:</h5>
+    <p>4710 North Habana Ave. Suite 304 <br>
+      Tampa, FL 33614</p>
+    <h5>Hours:</h5>
+    <p>Monday – Friday <br> 8:00am – 4:30pm</p>
+    <h5>Contact Info:</h5>
+    <p><i class="fas fa-phone"></i> Phone : 678-883-6897 / 678-552-3640<br>
+      <i class="fas fa-print"></i> Fax : 678-550-8877<br>
+      <i class="fas fa-envelope"></i> Email : info@rarediseaseresearch.com
+    </p>
+  </div>
 </body>

@@ -2,7 +2,6 @@
     <!-- Navbar -->
     <app-top-bar></app-top-bar>
     <!-- Navbar -->
-
     <!-- Background image -->
     <div class="p-5 text-center bg-image" style="
         background-image: url('../../assets/images/RDR\ mountains..jpg');
@@ -21,6 +20,17 @@
 </header>
 
 <body class="text-center">
+    <div id="content">
+        <h3>About Rare Diseases</h3>
+        <p>In the United States, a rare disease is defined as disease that affects less than 200,000 people. With 7,000
+            known rare diseases affecting 30 million Americans and an estimated 350 million people worldwide. Of those
+            statistics, about 75% of rare diseases are children, and about 30% of patients with rare diseases will not
+            live past the age of 5. </p>
+        <br>
+        <p>In 1983, the FDA approved The Orphan Drug Act which gives incentives to companies that work to develop
+            treatments for rare diseases. Since then, there have been nearly 350 treatments approved for various rare
+            diseases.</p>
+    </div>
     <div id="content">
         <h3>COVID Policy</h3>
         <p>RDR is closely monitoring the ongoing COVID-19 pandemic. As the current situation continues to
@@ -49,7 +59,21 @@
             and who enjoy their work. Together, our doctors and staff offer a superior level of treatment
             and
             service. We are committed to providing you with the best in rare disease research.</p>
-            <br>
-            <button type="button" class="btn btn-secondary btn-lg">Learn More</button>
+        <br>
+        <a routerLink="/about-us"><button type="button" class="btn btn-secondary btn-lg">Learn More</button></a>
+    </div>
+    <div id="content">
+        <h3>Flexbox</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-evenly">
+            <app-card class="mb-3" *ngFor="let trial of trials" [card]="trial">
+            </app-card>
+        </div>
+        <div class="container">
+            <h3>Active Trials</h3>
+            <div class="row">
+                <app-card class="col-4 mb-5 ps-5" *ngFor="let trial of trials" [card]="trial">
+                </app-card>
+            </div>
+          </div>
     </div>
 </body>

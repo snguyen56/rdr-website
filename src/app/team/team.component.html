@@ -5,7 +5,7 @@
     <!-- Background image -->
     <div class="p-5 text-center bg-image" style="
         background-image: url('../../assets/images/RDR\ mountains..jpg');
-        height: 400px;
+        height: 625px;
       ">
         <div class="mask">
             <div class="d-flex justify-content-center align-items-center h-100">
@@ -21,34 +21,31 @@
 
 <body class="text-center">
     <div id="content">
-        <h3>Our Team</h3>
-        <p>RDR is closely monitoring the ongoing COVID-19 pandemic. As the current situation continues to
-            change,
-            our utmost priority is the health and safety of RDR staff, patients, and their families.</p>
-        <br>
-        <p>RDR will incorporate mandatory measures such as wearing masks, social distancing where possible,
-            temperature checks, and frequent cleaning and sanitation to ensure patient safety and minimize
-            exposure.
-            We have masks available, as well as hand sanitizer throughout our facilities to help facilitate
-            minimizing the spread of the virus.</p>
+        <h3>Leadership</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-evenly">
+            <app-card class="mb-3" *ngFor="let leader of leaders" [card]="leader">
+            </app-card>
+        </div>
     </div>
     <div id="content">
-        <h3>Staff</h3>
-        <p>We are a group of physicians and coordinators dedicated to clinical research. Our team consists
-            of
-            exemplary staff with specialties relating to neurology, muscular dystrophy, pediatric medicine,
-            emergency care, and many other specialties. Our approach is to focus on patient care in
-            administering the trial investigational products to produce the clearest and most concise data
-            possible. With our patients, our facilities, and our operating procedures, the safety and
-            privacy of
-            our patients and employees are our top priority.</p>
-        <br>
-        <p>We have a staff we are extremely proud of. A group of professionals who are the best at what they
-            do
-            and who enjoy their work. Together, our doctors and staff offer a superior level of treatment
-            and
-            service. We are committed to providing you with the best in rare disease research.</p>
-            <br>
-            <button type="button" class="btn btn-secondary btn-lg">Learn More</button>
+        <h3>Resident Nurses</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-evenly">
+            <app-card class="mb-3" *ngFor="let nurse of nurses" [card]="nurse">
+            </app-card>
+        </div>
+    </div>
+    <div id="content">
+        <h3>Clinical Staff</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-evenly">
+            <app-card class="mb-3" *ngFor="let staff of clinic" [card]="staff">
+            </app-card>
+        </div>
+    </div>
+    <div id="content">
+        <h3>Administrative and Regulatory Staff</h3>
+        <div class="d-flex flex-row flex-wrap justify-content-evenly">
+            <app-card class="mb-3" *ngFor="let staff of admin" [card]="staff">
+            </app-card>
+        </div>
     </div>
 </body>

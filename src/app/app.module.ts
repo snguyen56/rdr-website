@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -26,6 +28,9 @@ import { ContactComponent } from './contact/contact.component';
 import { CollabComponent } from './collab/collab.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TeamComponent } from './team/team.component';
+import { FaqComponent } from './faq/faq.component';
+import { CardComponent } from './components/card/card.component';
+import { ActiveTrialsComponent } from './active-trials/active-trials.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,9 @@ import { TeamComponent } from './team/team.component';
     CollabComponent,
     AboutUsComponent,
     TeamComponent,
+    FaqComponent,
+    CardComponent,
+    ActiveTrialsComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,9 @@ import { TeamComponent } from './team/team.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

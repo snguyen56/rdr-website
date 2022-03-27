@@ -14,7 +14,24 @@ h1, h4 {
     padding-left: 20%;
     padding-right: 20%;
 }
-#content:nth-child(even) {
-    color: rgba($color: #551a77, $alpha: 1.0);
-    background-color: rgb(240, 218, 240);
-}
+// #content:nth-child(even) {
+//     color: rgba($color: #551a77, $alpha: 1.0);
+//     background-color: rgb(240, 218, 240);
+// }
+
+.carousel-control-prev-icon {
+    &::after {
+      content: '\f053';
+      font-weight: $font-weight-bold;
+      font-family:  'Font Awesome 6 Free';
+      font-size: 1.7rem;
+    }
+  }
+  .carousel-control-next-icon {
+    &::after {
+      content: '\f054';
+      font-weight: $font-weight-bold;
+      font-family:  'Font Awesome 6 Free';
+      font-size: 1.7rem;
+    }
+  }
