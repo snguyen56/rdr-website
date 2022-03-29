@@ -19,7 +19,7 @@
     <!-- Background image -->
 </header>
 
-<body class="text-center">
+<body class="text-center format">
     <div id="content">
         <h3>About Rare Diseases</h3>
         <p>In the United States, a rare disease is defined as disease that affects less than 200,000 people. With 7,000
@@ -63,17 +63,17 @@
         <a routerLink="/about-us"><button type="button" class="btn btn-secondary btn-lg">Learn More</button></a>
     </div>
     <div id="content">
-        <h3>Flexbox</h3>
+        <h3>Active Trials</h3>
         <div class="d-flex flex-row flex-wrap justify-content-evenly">
             <app-card class="mb-3" *ngFor="let trial of trials" [card]="trial">
             </app-card>
         </div>
-        <div class="container">
+        <!-- <div class="container">
             <h3>Active Trials</h3>
             <div class="row">
                 <app-card class="col-4 mb-5 ps-5" *ngFor="let trial of trials" [card]="trial">
                 </app-card>
             </div>
-          </div>
+          </div> -->
     </div>
 </body>

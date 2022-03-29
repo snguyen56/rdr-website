@@ -15,12 +15,11 @@ export class ContactComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   onClickSubmit(data: any) {
-    //alert("Entered data is: " + JSON.stringify(data))
-    this.http.post("http://localhost:8080/mail", data).subscribe(() => {
-      console.log('Data added successfully!')
-    }, (err) => {
-      console.log(err);
-    });
+    alert("Entered data is: " + JSON.stringify(data))
+  //   this.http.post("http://localhost:8080/mail", data).subscribe({
+  //     error: (e) => console.error(e),
+  //     complete: () => console.info('complete') 
+  // })
 
   }
 

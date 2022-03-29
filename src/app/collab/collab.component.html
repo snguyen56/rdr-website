@@ -37,6 +37,9 @@
     <h4>{{section.subtitle}}</h4>
     <p>{{section.body}}</p>
   </div>
+  <div class="d-flex flex-row flex-wrap align-content-between" id="content">
+    <img class="img-fluid w-25 p-4" *ngFor="let sponsor of sponsors" src={{sponsor}}>
+  </div>
   <div id="content">
     <h3>Locations</h3>
     <h5>Atlanta, GA:</h5>
