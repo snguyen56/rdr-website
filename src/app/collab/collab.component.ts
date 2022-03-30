@@ -16,7 +16,7 @@ export class CollabComponent implements OnInit {
   sections = [
     {
       header: "Our Research Facility",
-      subtitle: "We have over 10000 square feet of dedicated clinical research space.",
+      subtitle: "We have over 10,000 square feet of dedicated clinical research space.",
       body: "Our research pharmacy has a controlled mixing environment and storage for refrigerated and room-temperature\
       investigational IV or oral products. Several coordinators and a licensed pharmacist are available for both\
       open-label and randomized controlled studies. The research pharmacist compounds the drug within the same center as\

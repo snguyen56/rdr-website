@@ -7,10 +7,10 @@
         background-image: url('../../assets/images/RDR\ mountains..jpg');
         height: 625px; width:100%;
       ">
-        <div class="mask">
+        <div class="mask" style="background-color: rgba(251, 251, 251, 0.3);">
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white">
-                    <h1 class="mb-3">Rare Disease Research</h1>
+                    <h1 class="mb-3 display-2">Rare Disease Research</h1>
                     <h4 class="mb-3">Supporting research through exceptional clinical trial experience</h4>
                 </div>
             </div>
@@ -19,9 +19,20 @@
     <!-- Background image -->
 </header>
 
-<body class="text-center format">
-    <div id="content">
-        <h3>About Rare Diseases</h3>
+<body class="text-center" id="content">
+    <div class="note note-secondary fst-italic text-start mt-0">
+        <h3>COVID Policy</h3>
+        <p>RDR is closely monitoring the ongoing COVID-19 pandemic. As the current situation continues to
+            change,
+            our utmost priority is the health and safety of RDR staff, patients, and their families.</p>
+        <p>RDR will incorporate mandatory measures such as wearing masks, social distancing where possible,
+            temperature checks, and frequent cleaning and sanitation to ensure patient safety and minimize
+            exposure.
+            We have masks available, as well as hand sanitizer throughout our facilities to help facilitate
+            minimizing the spread of the virus.</p>
+    </div>
+    <div>
+        <h1>About Rare Diseases</h1>
         <p>In the United States, a rare disease is defined as disease that affects less than 200,000 people. With 7,000
             known rare diseases affecting 30 million Americans and an estimated 350 million people worldwide. Of those
             statistics, about 75% of rare diseases are children, and about 30% of patients with rare diseases will not
@@ -31,20 +42,8 @@
             treatments for rare diseases. Since then, there have been nearly 350 treatments approved for various rare
             diseases.</p>
     </div>
-    <div id="content">
-        <h3>COVID Policy</h3>
-        <p>RDR is closely monitoring the ongoing COVID-19 pandemic. As the current situation continues to
-            change,
-            our utmost priority is the health and safety of RDR staff, patients, and their families.</p>
-        <br>
-        <p>RDR will incorporate mandatory measures such as wearing masks, social distancing where possible,
-            temperature checks, and frequent cleaning and sanitation to ensure patient safety and minimize
-            exposure.
-            We have masks available, as well as hand sanitizer throughout our facilities to help facilitate
-            minimizing the spread of the virus.</p>
-    </div>
-    <div id="content">
-        <h3>Our approach</h3>
+    <div>
+        <h1>Our approach</h1>
         <p>We are a group of physicians and coordinators dedicated to clinical research. Our team consists
             of
             exemplary staff with specialties relating to neurology, muscular dystrophy, pediatric medicine,
@@ -60,16 +59,16 @@
             and
             service. We are committed to providing you with the best in rare disease research.</p>
         <br>
-        <a routerLink="/about-us"><button type="button" class="btn btn-secondary btn-lg">Learn More</button></a>
+        <a routerLink="/about-us"><button type="button" class="btn btn-lg">Learn More</button></a>
     </div>
-    <div id="content">
-        <h3>Active Trials</h3>
+    <div>
+        <h1>Active Trials</h1>
         <div class="d-flex flex-row flex-wrap justify-content-evenly">
             <app-card class="mb-3" *ngFor="let trial of trials" [card]="trial">
             </app-card>
         </div>
         <!-- <div class="container">
-            <h3>Active Trials</h3>
+            <h1>Active Trials</h1>
             <div class="row">
                 <app-card class="col-4 mb-5 ps-5" *ngFor="let trial of trials" [card]="trial">
                 </app-card>
