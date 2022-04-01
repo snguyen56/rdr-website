@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CollabComponent implements OnInit {
 
   photos = [
-    { title: "Entrance", path: "../../assets/images/facilities/entrance.jpg" },
-    { title: "Patient Room", path: "../../assets/images/facilities/Patient Room.jpg" },
-    { title: "Overnight Room", path: "../../assets/images/facilities/RDR_Overnight_Room_1st_Floor.jpg" },
+    { title: "Entrance", path: "assets/images/facilities/entrance.jpg" },
+    { title: "Patient Room", path: "assets/images/facilities/Patient Room.jpg" },
+    { title: "Overnight Room", path: "assets/images/facilities/RDR_Overnight_Room_1st_Floor.jpg" },
   ];
 
   sections = [
