@@ -26,7 +26,7 @@ p {
     padding-left: 20%;
     padding-right: 20%;
 }
-.format #content:nth-child(odd) {
+.format div:nth-child(even) {
     //color: rgba($color: #551a77, $alpha: 1.0);
     background-color: rgb(240, 218, 240);
 }
@@ -46,7 +46,3 @@ p {
       font-size: 1.7rem;
     }
   }
-.btn {
-  background-color: rgb(103, 47, 156);
-  color: white;
-}

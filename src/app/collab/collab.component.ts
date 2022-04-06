@@ -23,7 +23,7 @@ export class CollabComponent implements OnInit {
       the infusion room, minimizing the time between mixing and infusion."
     },
     {
-      header: "CURRENT COLLABORATORS",
+      header: "Current Collaborators",
       subtitle: null,
       body: "RDR is committed to transforming clinical research in rare diseases by several mechanisms including working with\
       the patient(s), their families, communities, and patient advocacy groups. Additionally, our industry collaborators\
