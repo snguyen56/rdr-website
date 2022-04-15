@@ -45,6 +45,12 @@
                             <textarea mdbInput class="form-control" name="message" id="textArea" rows="4" ngModel></textarea>
                             <label mdbLabel class="form-label" for="textArea">Message</label>
                         </mdb-form-control>
+                        
+                        <!-- File Upload -->
+                        <mdb-form-control>
+                            <input name="fileUpload" type="file" (change)="onFileSelected($event)">
+                            <button type="button" (click)="onUpload()">Upload</button>
+                        </mdb-form-control>
 
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
