@@ -6,19 +6,30 @@
  
 @import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
 
-h1, h4 {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+h1 {
     color: rgb(103, 47, 156);
+    font-family: 'Raleway', sans-serif;
+}
+h4 {
+  color: rgb(103, 47, 156);
+  font-family: 'Open Sans', sans-serif;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
 }
 #content {
     padding: 5em;
     padding-left: 20%;
     padding-right: 20%;
 }
-// #content:nth-child(even) {
-//     color: rgba($color: #551a77, $alpha: 1.0);
-//     background-color: rgb(240, 218, 240);
-// }
-
+.format div:nth-child(even) {
+    //color: rgba($color: #551a77, $alpha: 1.0);
+    background-color: rgb(240, 218, 240);
+}
 .carousel-control-prev-icon {
     &::after {
       content: '\f053';

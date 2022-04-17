@@ -1,29 +1,14 @@
 <header>
   <!-- Navbar -->
-  <app-top-bar></app-top-bar>
+  <app-top-bar [pic]="'assets/images/RDR\ mountains..jpg'"></app-top-bar>
   <!-- Navbar -->
-  <!-- Background image -->
-  <div class="p-5 text-center bg-image" style="
-        background-image: url('../../assets/images/RDR\ mountains..jpg');
-        height: 625px;
-      ">
-    <div class="mask">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">Rare Disease Research</h1>
-          <h4 class="mb-3">Supporting research through exceptional clinical trial experience</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Background image -->
 </header>
 
 <body class="text-center">
   <div id="content">
-    <h3>Facility</h3>
+    <h1>Facility</h1>
     <!-- Carousel for images -->
-    <mdb-carousel class="w-75 mx-auto" [controls]="true" [indicators]="true">
+    <mdb-carousel class="mx-auto" [controls]="true" [indicators]="true">
       <mdb-carousel-item *ngFor="let photo of photos">
         <img [src]="photo.path" class="img-fluid" alt="..." />
         <div class="carousel-caption d-none d-md-block">
@@ -33,12 +18,17 @@
     </mdb-carousel>
   </div>
   <div id="content" *ngFor="let section of sections">
-    <h3>{{section.header}}</h3>
+    <h1>{{section.header}}</h1>
     <h4>{{section.subtitle}}</h4>
     <p>{{section.body}}</p>
   </div>
+  <div class="d-flex flex-row flex-wrap align-content-between pt-0" id="content">
+    <a href="">
+      <img class="img-fluid w-25 p-4" *ngFor="let sponsor of sponsors" src={{sponsor}}>
+    </a>
+  </div>
   <div id="content">
-    <h3>Locations</h3>
+    <h1>Locations</h1>
     <h5>Atlanta, GA:</h5>
     <p>1730 Northeast Expressway NE <br>
       Atlanta, GA 30329</p>
