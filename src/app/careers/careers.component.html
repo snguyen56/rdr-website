@@ -1,0 +1,91 @@
+<header>
+    <!-- Navbar -->
+    <app-top-bar [pic]="'assets/images/RDR\ mountains..jpg'"></app-top-bar>
+    <!-- Navbar -->
+</header>
+<body id="content">
+    <h1 class="text-center">Jobs available</h1>
+    <hr>
+    <h3>Clinical Research Coordinator I</h3>
+    <ul>
+        <li>Coordinates scheduling of patients for their studies (visits, physical therapy, MRIs, specialist appointments, follow-ups, etc.) </li>
+        <li>Completes timely data entry, clearing of queries, and participant reimbursements </li>
+        <li>Coordinates with Clinical Research Associate (CRA)/monitor for scheduling interim monitoring visits </li>
+        <li>Documents notes to file (NTFs) and/or protocol deviations appropriately </li>
+        <li>Orders and stocks study lab kits  </li>
+        <li>Sustains frequent and effective email communications between RDR and the CRO/Sponsor for questions and issues that may arise </li>
+        <li>Communicates with potential new patients </li>
+        <li>Makes and maintains organized subject binders</li>
+    </ul>
+    <hr>
+    <h3>Research Assistant</h3>
+    <ul>
+        <li>Learns and attempts data entry, clearing of queries, and participant reimbursements</li>
+        <li>Assists with processing and shipping of biological samples</li>
+        <li>Communicates with trial participants and assists with scheduling</li>
+        <li>Assists clinical research coordinators with study visits and filing/maintenance of subject binders</li>
+    </ul>
+    <hr>
+    <h3>Pharmacy Technician</h3>
+    <ul>
+        <li>Assists pharmacist in preparation of investigational product (IP) administered to trial participants</li>
+        <li>Receives and sends IP shipments</li>
+        <li>Accurately maintains temperature logs for IP as required </li>
+        <li>Handles IP accountability and maintains Pharmacy Binder with documentation of IP receipt, dispensation, and destruction</li>
+    </ul>
+    <hr>
+    <h3>Clinical Trial Liaison</h3>
+    <ul>
+        <li>Establishes and maintains relationships with academic researchers, private practitioners, and industry thought leaders in the field of neurogenetic rare disease</li>
+        <li>Attends professional conferences, patient advocacy and support groups, and other events to raise awareness about Rare Disease Research, LLC, and promote collaborations with external entities and stakeholders</li>
+        <li>Collaborate with the regulatory team during the start-up process of new clinical trials, including budget and contract negotiations with study sponsors and service providers</li>
+    </ul>
+    <hr>
+    <h3>Administrative Assistant/Receptionist</h3>
+    <ul>
+        <li>Greets trial participants arriving for clinic visits and other visitors</li>
+        <li>Gives facility tours to monitors, sponsors, and other visitors</li>
+        <li>Answers office phone and directs inquiries to the correct site personnel</li>
+        <li>Assists with scheduling of on-site visits of monitors and sponsors</li>
+        <li>Assists with shipping and receipt of packages</li>
+    </ul>
+    <hr>
+    <h3>Rare Disease Research Internship</h3>
+    <p>Our internship program is currently accepting applications. If you are interested in joining us, please submit your resume below. In your cover letter, please include the following:</p>
+    <ul>
+        <li>Why does clinical research interest you?</li>
+        <li>What are you doing now to better the world around you?</li>
+    </ul>
+    <hr>
+    <div class="text-center">
+        <h1 class="pt-5">Contact Us</h1>
+        <form #formdata = "ngForm" (ngSubmit) = "onClickSubmit(formdata.value); formdata.resetForm()" >
+            <!-- Name input -->
+            <mdb-form-control>
+                <input mdbInput type="text" name="name" id="typeText" class="form-control" ngModel/>
+                <label mdbLabel class="form-label" for="typeText">Name</label>
+            </mdb-form-control>
+
+            <!-- Email input -->
+            <mdb-form-control>
+                <input mdbInput type="email" name="email" id="typeEmail" class="form-control" ngModel/>
+                <label mdbLabel class="form-label" for="typeEmail">Email</label>
+            </mdb-form-control>
+
+            <!-- File input -->
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" name="fileUpload" (change)="onFileSelected($event)"/>
+            </div>
+
+            <!-- Message input -->
+            <mdb-form-control>
+                <textarea mdbInput class="form-control" name="message" id="textArea" rows="4" ngModel></textarea>
+                <label mdbLabel class="form-label" for="textArea">Message</label>
+            </mdb-form-control>
+            
+
+            <!-- Submit button -->
+            <button type="submit" class="btn-secondary btn btn-lg" (click)="onUpload()">Submit</button>
+        </form>
+    </div>
+</body>

@@ -31,6 +31,7 @@ import { TeamComponent } from './team/team.component';
 import { FaqComponent } from './faq/faq.component';
 import { CardComponent } from './components/card/card.component';
 import { ActiveTrialsComponent } from './active-trials/active-trials.component';
+import { CareersComponent } from './careers/careers.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ActiveTrialsComponent } from './active-trials/active-trials.component';
     FaqComponent,
     CardComponent,
     ActiveTrialsComponent,
+    CareersComponent,
   ],
   imports: [
     BrowserModule,
