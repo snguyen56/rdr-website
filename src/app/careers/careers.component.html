@@ -57,4 +57,35 @@
         <li>What are you doing now to better the world around you?</li>
     </ul>
     <hr>
+    <div class="text-center">
+        <h1 class="pt-5">Contact Us</h1>
+        <form #formdata = "ngForm" (ngSubmit) = "onClickSubmit(formdata.value); formdata.resetForm()" >
+            <!-- Name input -->
+            <mdb-form-control>
+                <input mdbInput type="text" name="name" id="typeText" class="form-control" ngModel/>
+                <label mdbLabel class="form-label" for="typeText">Name</label>
+            </mdb-form-control>
+
+            <!-- Email input -->
+            <mdb-form-control>
+                <input mdbInput type="email" name="email" id="typeEmail" class="form-control" ngModel/>
+                <label mdbLabel class="form-label" for="typeEmail">Email</label>
+            </mdb-form-control>
+
+            <!-- File input -->
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" name="fileUpload" (change)="onFileSelected($event)"/>
+            </div>
+
+            <!-- Message input -->
+            <mdb-form-control>
+                <textarea mdbInput class="form-control" name="message" id="textArea" rows="4" ngModel></textarea>
+                <label mdbLabel class="form-label" for="textArea">Message</label>
+            </mdb-form-control>
+            
+
+            <!-- Submit button -->
+            <button type="submit" class="btn-secondary btn btn-lg" (click)="onUpload()">Submit</button>
+        </form>
+    </div>
 </body>
