@@ -23,24 +23,6 @@ export class ContactComponent implements OnInit {
     })
   }
 
-
-
-  onFileSelected(file : any){
-    // this.selectedFile = file;
-    console.log(file)
-    this.selectedFile = <File>file.target.files[0];
-    console.log(this.selectedFile)
-  }
-
-  onUpload(){
-    const fileData = new FormData();
-    fileData.append('fileUpload', this.selectedFile, this.selectedFile.name);
-    console.log(fileData);
-    this.http.post("http://localhost:8080/upload", fileData).subscribe(res => {
-      console.log(res);
-    });
-  }
-
   ngOnInit(): void {
 
   }
