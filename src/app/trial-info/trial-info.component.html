@@ -1,0 +1,15 @@
+<header>
+    <!-- Navbar -->
+    <app-top-bar [pic]="'assets/images/facilities/building.jpg'"></app-top-bar>
+    <!-- Navbar -->
+</header>
+
+<body class="text-center">
+    <div id="content">
+        <h1>Trial Phases</h1>
+        <div class="text-start" *ngFor="let phase of phases">
+            <h3>{{phase.title}}</h3>
+            <p>{{phase.body}}</p>
+        </div>
+    </div>
+</body>

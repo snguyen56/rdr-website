@@ -32,6 +32,7 @@ import { FaqComponent } from './faq/faq.component';
 import { CardComponent } from './components/card/card.component';
 import { ActiveTrialsComponent } from './active-trials/active-trials.component';
 import { CareersComponent } from './careers/careers.component';
+import { TrialInfoComponent } from './trial-info/trial-info.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { CareersComponent } from './careers/careers.component';
     CardComponent,
     ActiveTrialsComponent,
     CareersComponent,
+    TrialInfoComponent,
   ],
   imports: [
     BrowserModule,
