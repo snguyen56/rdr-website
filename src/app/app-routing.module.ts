@@ -8,6 +8,7 @@ import { TeamComponent } from './team/team.component'
 import { FaqComponent } from './faq/faq.component';
 import { ActiveTrialsComponent } from './active-trials/active-trials.component';
 import { CareersComponent } from './careers/careers.component';
+import { TrialInfoComponent } from './trial-info/trial-info.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'faq', component:FaqComponent},
   {path: 'active-trial', component:ActiveTrialsComponent},
   {path: 'career', component:CareersComponent},
+  {path: 'trial-info', component:TrialInfoComponent}
 ];
 
 @NgModule({
