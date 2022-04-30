@@ -44,8 +44,9 @@
 
                         <!-- Message input -->
                         <mdb-form-control>
-                            <textarea mdbInput class="form-control" name="message" id="textArea" rows="4" ngModel></textarea>
+                            <textarea mdbInput #message="ngModel" class="form-control" name="message" id="textArea" rows="4" ngModel required></textarea>
                             <label mdbLabel class="form-label" for="textArea">Message</label>
+                            <mdb-error *ngIf="message?.invalid && (message?.dirty || message?.touched)">*Message is required</mdb-error>
                         </mdb-form-control>
 
                         <!-- Submit button -->
