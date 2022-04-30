@@ -89,7 +89,7 @@
 
             <!-- Email input -->
             <mdb-form-control>
-                <input mdbInput #email="ngModel" type="email" name="email" id="typeEmail" class="form-control" pattern="([a-zA-Z]?.+@?.+\.(comCOM)?)\w+" ngModel required/>
+                <input mdbInput #email="ngModel" type="email" name="email" id="typeEmail" class="form-control" pattern="([a-zA-Z]?.+@?.+\.([a-zA-Z])?)\w+" ngModel required/>
                 <label mdbLabel class="form-label" for="typeEmail">Email</label>
                 <mdb-error *ngIf="email?.invalid && (email?.dirty || email?.touched)">*Email is required</mdb-error>
             </mdb-form-control>
