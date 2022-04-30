@@ -63,14 +63,17 @@
         <mdb-tab title="Version 2">
             <div class="container border-top border-bottom">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="job" *ngFor="let job of jobs; index as i" (click)="onClick(i)">
-                            <h3>{{job.title}}</h3>
+                    <div class="col-4 list-group list-group-flush border-start pe-0">
+                        <div class=" list-group-item list-group-item-action" *ngFor="let job of jobs; index as i" (click)="onClick(i)">
+                            <h4>{{job.title}}</h4>
                         </div>
                     </div>
                     <div class="col-8 border-start">
-                        {{view.title}}
-                        {{view.description}}
+                        <h3 class="text-center">{{view.title}}</h3>
+                        <p>{{view.description}}</p>
+                        <ul>
+                            <li *ngFor="let duty of view.duties">{{duty}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
