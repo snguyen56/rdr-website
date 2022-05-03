@@ -5,9 +5,11 @@
     <div class="mt-5" id="content">
         <h1>New Patients</h1>
         <mdb-accordion [flush]="true">
-            <mdb-accordion-item *ngFor="let item of info">
-                <ng-template mdbAccordionItemHeader>{{item.title}}</ng-template>
-                <ng-template mdbAccordionItemBody>{{item.body}}</ng-template>
+            <mdb-accordion-item *ngFor="let item of content">
+                <ng-template mdbAccordionItemHeader>{{item.header}}</ng-template>
+                <ng-template mdbAccordionItemBody>
+                    {{item.body}}
+                </ng-template>
             </mdb-accordion-item>
         </mdb-accordion>
     </div>

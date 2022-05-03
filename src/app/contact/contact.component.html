@@ -30,14 +30,16 @@
                     <form #formdata = "ngForm" (ngSubmit) = "onClickSubmit(formdata.value)" >
                         <!-- Name input -->
                         <mdb-form-control>
-                            <input mdbInput type="text" name="name" id="typeText" class="form-control" ngModel/>
+                            <input mdbInput #name="ngModel" minlength=2 type="text" name="name" id="typeText" class="form-control" ngModel required>
                             <label mdbLabel class="form-label" for="typeText">Name</label>
+                            <mdb-error *ngIf="name?.invalid && (name?.dirty || name?.touched)">*Name is required</mdb-error>
                         </mdb-form-control>
-
+                        
                         <!-- Email input -->
                         <mdb-form-control>
-                            <input mdbInput type="email" name="email" id="typeEmail" class="form-control" ngModel/>
+                            <input mdbInput #email="ngModel" type="email" name="email" id="typeEmail" class="form-control" ngModel required email=True/>
                             <label mdbLabel class="form-label" for="typeEmail">Email</label>
+                            <mdb-error *ngIf="email?.invalid && (email?.dirty || email?.touched)">*Email is required</mdb-error>
                         </mdb-form-control>
 
                         <!-- Message input -->
@@ -47,7 +49,7 @@
                         </mdb-form-control>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn-secondary btn btn-lg">Submit</button>
+                        <button type="submit" name="submit" [disabled]="!formdata.valid" class="btn-secondary btn btn-lg">Submit</button>
                     </form>
                 </div>
         </div>

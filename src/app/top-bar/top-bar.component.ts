@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
-  @Input() pic!: any;
+  @Input() pic?: any;
   constructor() { }
 
   ngOnInit(): void {

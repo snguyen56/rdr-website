@@ -61,16 +61,19 @@
     <hr>
         </mdb-tab>
         <mdb-tab title="Version 2">
-            <div class="container border-top border-bottom">
+            <div class="container border-top border-bottom border-end">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="job" *ngFor="let job of jobs; index as i" (click)="onClick(i)">
-                            <h3>{{job.title}}</h3>
+                    <div class="col-4 list-group list-group-flush border-start pe-0">
+                        <div class=" list-group-item list-group-item-action" *ngFor="let job of jobs; index as i" (click)="onClick(i)" [ngClass]="{'selected':view.title==job.title}">
+                            <h4>{{job.title}}</h4>
                         </div>
                     </div>
                     <div class="col-8 border-start">
-                        {{view.title}}
-                        {{view.description}}
+                        <h3 class="text-center">{{view.title}}</h3>
+                        <p>{{view.description}}</p>
+                        <ul>
+                            <li *ngFor="let duty of view.duties">{{duty}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -82,19 +85,21 @@
         <form #formdata = "ngForm" (ngSubmit) = "onSubmit(formdata.value); formdata.resetForm()" >
             <!-- Name input -->
             <mdb-form-control>
-                <input mdbInput type="text" name="name" id="typeText" class="form-control" ngModel/>
+                <input mdbInput #name="ngModel" minlength=2 type="text" name="name" id="typeText" class="form-control" ngModel required/>
                 <label mdbLabel class="form-label" for="typeText">Name</label>
+                <mdb-error *ngIf="name?.invalid && (name?.dirty || name?.touched)">*Name is required</mdb-error>
             </mdb-form-control>
 
             <!-- Email input -->
             <mdb-form-control>
-                <input mdbInput type="email" name="email" id="typeEmail" class="form-control" ngModel/>
+                <input mdbInput #email="ngModel" type="email" name="email" id="typeEmail" class="form-control" pattern="([a-zA-Z]?.+@?.+\.([a-zA-Z])?)\w+" ngModel required/>
                 <label mdbLabel class="form-label" for="typeEmail">Email</label>
+                <mdb-error *ngIf="email?.invalid && (email?.dirty || email?.touched)">*Email is required</mdb-error>
             </mdb-form-control>
 
             <!-- File input -->
-                <input type="file" class="form-control" name="fileUpload" (change)="onFileSelected($event)" ngModel/>
-
+                <input type="file" #file="ngModel" class="form-control" name="fileUpload" (change)="onFileSelected($event)" ngModel required/>
+                <mdb-error *ngIf="file?.invalid && file?.touched">*File is required</mdb-error>
             <!-- Message input -->
             <mdb-form-control>
                 <textarea mdbInput class="form-control" name="message" id="textArea" rows="4" ngModel></textarea>
@@ -103,7 +108,7 @@
             
 
             <!-- Submit button -->
-            <button type="submit" class="btn-secondary btn btn-lg" (click)="onUpload()">Submit</button>
+            <button type="submit" class="btn-secondary btn btn-lg" [disabled]="!formdata.valid" (click)="onUpload()">Submit</button>
         </form>
     </div>
 </body>
