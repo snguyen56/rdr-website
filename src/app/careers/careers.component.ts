@@ -81,6 +81,7 @@ export class CareersComponent implements OnInit {
 
   onClick(index: number) {
     this.view = this.jobs[index]
+    console.log(this.view.title + this.jobs[index].title)
   }
 
   onSubmit(data: any) {

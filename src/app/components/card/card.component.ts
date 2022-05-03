@@ -10,7 +10,7 @@ export class CardComponent implements OnInit {
   isExpanded: Boolean = false;
   buttonText: String = "Read More";
 
-  @Input() card!: any;
+  @Input() card?: any;
   @Input() button: boolean = false;
   constructor() { }
 

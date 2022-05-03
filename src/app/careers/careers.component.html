@@ -61,10 +61,10 @@
     <hr>
         </mdb-tab>
         <mdb-tab title="Version 2">
-            <div class="container border-top border-bottom">
+            <div class="container border-top border-bottom border-end">
                 <div class="row">
                     <div class="col-4 list-group list-group-flush border-start pe-0">
-                        <div class=" list-group-item list-group-item-action" *ngFor="let job of jobs; index as i" (click)="onClick(i)">
+                        <div class=" list-group-item list-group-item-action" *ngFor="let job of jobs; index as i" (click)="onClick(i)" [ngClass]="{'selected':view.title==job.title}">
                             <h4>{{job.title}}</h4>
                         </div>
                     </div>

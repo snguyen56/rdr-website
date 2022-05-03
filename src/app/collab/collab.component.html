@@ -23,8 +23,8 @@
     <p>{{section.body}}</p>
   </div>
   <div class="d-flex flex-row flex-wrap align-content-between pt-0" id="content">
-    <a href="">
-      <img class="img-fluid w-25 p-4" *ngFor="let sponsor of sponsors" src={{sponsor}}>
+    <a class="w-25 p-4" *ngFor="let sponsor of sponsors"  href="{{sponsor.link}}">
+      <img class="img-fluid" src={{sponsor.image}}>
     </a>
   </div>
   <div id="content">
